@@ -6,8 +6,17 @@ public class loop {
         var scanner =new Scanner(System.in);
         String input = scanner.nextLine();
         while(!"quit".equals(input)){
-            System.out.println("unknown command");
-            input = scanner.nextLine();
+            if("fibo".equals(input)){
+                System.out.println("entrez un nombre: ");
+                int n = scanner.nextInt();
+                int res = Fibonacci.fibo(n);
+                System.out.println(res);
+                input = scanner.nextLine();
+            }
+            else{
+                System.out.println("unknown command");
+                input = scanner.nextLine();
+            }
         }
     }
 }
