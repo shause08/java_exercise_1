@@ -1,9 +1,17 @@
+import java.util.Scanner;
 
-public class Fibonacci {
-    public static int fibo(int n){
-        if(n <= 1){
-            return n;
+class Fibo implements Command {
+    public String name() {
+        return "fibo";
+    }
+    public Boolean run(Scanner scanner) {
+        System.out.println("Entrez un nombre n :");
+        int n = Integer.parseInt(scanner.nextLine());
+        if (n < 0) {
+            System.out.println("Le nombre doit être positif");
+        } else {
+            System.out.println("f("+n+") = " + Launcher.fibo(n));
         }
-        return fibo(n -1) + fibo(n - 2);
+        return false;
     }
 }

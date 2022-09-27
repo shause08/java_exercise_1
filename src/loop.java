@@ -9,7 +9,7 @@ public class loop {
             if("fibo".equals(input)){
                 System.out.println("entrez un nombre: ");
                 int n = scanner.nextInt();
-                int res = Fibonacci.fibo(n);
+                int res = Fibo.fibo(n);
                 System.out.println(res);
                 input = scanner.nextLine();
             }
